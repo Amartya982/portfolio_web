@@ -1,0 +1,14 @@
+
+.contain{
+    background-color: teal;
+max-width: 1500px;
+min-height: 1000px;
+padding: 10px;
+margin: -8px;
+}
+.tex{
+font-weight: 300;
+color:white;
+font-size: 2rem;
+
+}
