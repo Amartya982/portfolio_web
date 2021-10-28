@@ -1,20 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import PlanetOne from '../../images/planet.svg';
 import PlanetTwo from '../../images/planet-2.svg';
 import PlanetThree from '../../images/planet-3.svg';
 import PlanetFour from '../../images/planet-4.svg';
-const ab="https://www.thecodingsheep.com/"
 const Section = styled.section`
-  height: 150vh;
+  height: 100vh;
   display: flex;
-  padding:1rem;
-  margin:-1rem;
   justify-content: center;
   align-items: center;
- 
   background:	#000000;
+  @media screen and (max-width: 480px) {
+    height:150vh;
+    
+  }
 `;
 
 const Container = styled.div`
@@ -25,6 +26,7 @@ const Container = styled.div`
   @media screen and (max-width: 768px) {
     grid-grid-template-columns: 1fr;
   }
+ 
 `;
 
 const ColumnLeft = styled.div`
@@ -109,14 +111,14 @@ const HeroSection= () => {
             variants={fadeLeft}
             initial='hidden'
             animate='visible'
-            transition={{ duration: 2 }}
+            transition={{ duration: 1}}
           >
             Welcome to my Portfolio
           </motion.p>
+          <Link to="/portfolio">
           <Button 
-    
           className="btn"
-          href="http://www.google.com/"
+          onClick={() => ('/Portfolio')}
             whileHover={{ scale: 1.25 }}
             whileTap={{
               scale: 1.95,
@@ -130,6 +132,7 @@ const HeroSection= () => {
             Get Started
                   
           </Button>
+          </Link >
         </ColumnLeft>
         <ColumnRight>
           <Image
