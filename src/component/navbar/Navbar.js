@@ -2,51 +2,42 @@ import React from 'react'
 import "./Navbar.css"
 import {
   BrowserRouter as Router,
-  Link,NavLink,
+  Link, NavLink,
   Route,
   Switch,
 } from 'react-router-dom';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import { motion } from 'framer-motion';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import EmailIcon from '@material-ui/icons/Email';
-import Portfolio from "../portfolio/Portfolio"
-const Navbar = () => {
-    return (
-     
-      
-        <div className="navbar">
-        <Link className="nav" to="/About">ABOUT</Link>{' '}
-        <Link className="nav1"  to="/Portfolio" >PORTFOLIO</Link>{' '}
-        <Link className="nav2" to="/Contact">CONTACT</Link>
-        <div className="icon">
-        <a href="https://www.facebook.com/Amarakzq"
-        className="fb">
-        <FacebookIcon style={{ color: "white ", fontSize:"30" }}/>
-      </a>
-      <a href="https://www.instagram.com/amar_akz/"
-        className="insta">
-        <InstagramIcon   style={{ color: "WHITE ", fontSize:"30" }}/>
-      </a>
-      <a href="https://github.com/Amartya982"
-      className="github">
-      <GitHubIcon   style={{ color: "white", fontSize:"30" }}/>
-    </a>
-    <a href="mailto: amarkumargta@gmail.com"
-    className="gmail">
-    <EmailIcon   style={{ color: "white", fontSize:"30" }}/>
-  </a>
 
-        
-        
-        
-       
-        </div>  
+const Navbar = () => {
+  return (
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-black">
+      <div class="container-fluid">
+        <button class="navbar-toggler" style={{backgroundColor:"white",opacity:"2"}} type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          
+          <ul class="navbar-nav  ms-auto">
+            <li class="nav-item me-5"  >
+              <a class="nav-link active " style={{ color: "white" }} aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" style={{ color: "white" }} href="/portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link " style={{ color: "white" }} href="/about">About</a>
+            </li>
+
+          </ul>
+        </div>
       </div>
-     
-     
-    )
+    </nav>
+
+
+
+
+  )
 }
 
 export default Navbar

@@ -1,5 +1,4 @@
 
-import './App.css';
 
 import HeroSection from './component/herosection/HeroSection';
 import  Navbar from "../src/component/navbar/Navbar"
@@ -28,13 +27,14 @@ function App() {
    <Route  exact path="/contact">
    <Contact />
    </Route>
-   <Route  exact path="/About">
+   <Route  exact path="/about">
    <About/>
    </Route>
    <Route  exact path="/">
+
+   <Navbar />
    <HeroSection />
    
-   <Navbar />
    </Route>
    </Switch>
    
