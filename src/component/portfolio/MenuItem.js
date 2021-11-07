@@ -19,7 +19,7 @@ const MenuItem = ({menuItem}) => {
                 </div>
                 <h5 className="text">{item.title}
                 </h5>
-                    <p>polaceHolder</p>
+                  <br/>
                 </div>
             })
 
